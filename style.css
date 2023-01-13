@@ -1,1 +1,107 @@
-/* Aquí va el CSS */
+@font-face {
+    font-family: 'Essentiarum';
+    src: url(/LETRA/Essentiarum-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    src: url(/LETRA/GillSans.otf);
+}
+
+@font-face {
+    font-family: 'GillSansBold';
+    src: url(/LETRA/GillSansBold.otf);
+}
+
+@font-face {
+    font-family: 'Pixeboy-z8XGD';
+    src: url(/LETRA/Pixeboy-z8XGD.ttf);
+}
+
+/* Body */
+body {
+    background-image: url(/img/Wallpaper-fondo.jpg);
+    background-size: cover;
+}
+
+/* cartas*/
+.cartas {
+    display: flex;
+    justify-content: center;
+}
+
+.carta-border {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    float: left;
+    padding: 15px;
+    border: 4px solid rgb(241, 245, 25);
+    width: 350px;
+    height: 500px;
+    margin: 20px;
+    border-radius: 14px;
+}
+
+.carta-border-bulbasaur {
+    background-color: rgb(113, 238, 75);
+}
+
+.carta-border-charmander {
+    background-color: rgb(238, 75, 75);
+}
+
+.carta-border-squirtel {
+    border-radius: 14px;
+    background-color: rgb(75, 140, 238);
+}
+
+.carta-border-pikachu {
+    background-color: rgb(238, 227, 75);
+}
+
+/* Parte de las imagenes */
+
+
+.imagen {
+    width: auto;
+    height: 280px;
+    background-image: url(/img/pokemon-background.png);
+    background-size: cover;
+    text-align: center;
+}
+
+
+.pokemon {
+    width: auto;
+    height: 280px;
+}
+
+
+
+/* Texto de la carta */
+
+h1 {
+    text-align: center;
+    font-family: 'Pixeboy-z8XGD';
+    font-size: 60px;
+    color: white;
+}
+
+.tipo {
+    font-family: 'Essentiarum';
+}
+
+.nom_pokemon {
+    font-family: 'GillSansBold';
+    font-size: 25px;
+
+}
+
+.cabecera {
+    margin: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ataques {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
