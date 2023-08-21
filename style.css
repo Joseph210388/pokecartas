@@ -3,6 +3,12 @@
     src: url(/LETRA/Pixeboy-z8XGD.ttf);
 }
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 /* Body */
 body {
     background-image: url(/img/Fondo.jpg);
@@ -10,12 +16,15 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Texto de la h1 */
 
 h1 {
-    margin-bottom: 70px;
+    margin: 60px 0px;
     text-align: center;
     font-family: 'Pixeboy-z8XGD';
     font-size: 60px;
@@ -47,6 +56,10 @@ input {
 }
 
 .busqueda {
+    margin-bottom: 100px;
+}
+
+.musica {
     margin-bottom: 50px;
 }
 
@@ -124,6 +137,7 @@ input {
     align-items: center;
     flex-direction: column;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.35);
+    margin: 0px 20px;
 }
 
 
@@ -221,4 +235,45 @@ input {
 audio {
     display: none;
 
+}
+
+/* footer */
+footer {
+    background-color: rgb(255, 255, 255);
+    margin-top: auto;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.copyright p {
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* media screen */
+/* tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+
+    /* musica */
+    .music-player-container {
+        width: 60vw;
+    }
+
+}
+
+/* movil */
+@media screen and (max-width:767px) {
+    .busqueda {
+        margin-bottom: 65px;
+    }
+
+    .music-player-container {
+        width: 96vw;
+    }
 }
