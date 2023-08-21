@@ -5,101 +5,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <!-- link google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <!-- vincular el css aquí -->
     <link rel="stylesheet" href="/style.css">
-
-    <title>Cartas Pokemon</title>
+    <!-- Java -->
+    <script src="/script.js" type="text/javascript" defer></script>
+    <title>Pokecard</title>
 </head>
 
-<body>
-    <h1>Cartas Pokemon</h1>
-    <div class="cartas">
-
-        <div class="carta-border carta-border-bulbasaur">
-            <div class="cabecera">
-                <span class="nom_pokemon">Bulbasaur</span>
-                <div class="stats">
-                    <span>70 PH</span>
-                    <span class="tipo">G</span>
-                </div>
+<h1>Pokedex</h1>
+<div class="content-page">
+    <div class="busqueda">
+        <form action="" onsubmit="searchPokemon(event)">
+            <input type="text" name="pokemon" autocomplete="off" placeholder="Busca el Pokemon">
+        </form>
+        <div data-poke-card class="poke-card">
+            <div class="TopPart">
+                <div data-poke-name>Pokedex</div>
+                <div data-poke-id></div>
             </div>
-
-            <div class="imagen">
-                <img class="pokemon" src="/img/bulbasaur.png" alt="">
+            <div data-poke-img-container class="img-container">
+                <img data-poke-img class="poke-img" src="./img/Icons/Missingo.png" />
             </div>
-            <div class="ataques">
-                <h4>Burbuja</h4>
-                <ul>
-                    <li>Overgrow</li>
-                    <li>Chlorophyll</li>
-                </ul>
-            </div>
+            <div data-poke-types class="poke-types"></div>
+            <div data-poke-stats class="poke-stats"></div>
         </div>
-        <div class="carta-border carta-border-charmander">
-            <div class="cabecera">
-                <span class="nom_pokemon">Charmander</span>
-                <div class="stats">
-                    <span>60 PH</span>
-                    <span class="tipo">R</span>
+    </div>
+
+    <div class="musica">
+        <div class="music-player-container">
+            <div class="title-music-container">
+                <h4 class="song-title">Music 8 bits</h4>
+                <span class="song-autor">Pokemon Company</span>
+            </div>
+            <div class="controls-music-container">
+                <div class="progress-song-container">
+                    <div class="progress-bar">
+                        <span class="progress"></span>
+                    </div>
+                </div>
+                <div class="time-container">
+                    <span class="time-left" id="CurrentSongTime"></span>
+                    <span class="time-left" id="SongLength"></span>
                 </div>
             </div>
-
-            <div class="imagen">
-                <img class="pokemon" src="/img/charmander.png" alt="">
-            </div>
-            <div class="ataques">
-                <h4>Abilities:</h4>
-                <ul>
-                    <li>Blaze</li>
-                    <li>Solar-Power</li>
-                </ul>
-            </div>
-        </div>
-        <div class="carta-border carta-border-squirtel">
-            <div class="cabecera">
-                <span class="nom_pokemon">Squirtle</span>
-                <div class="stats">
-                    <span>70 PH</span>
-                    <span class="tipo">W</span>
-                </div>
-            </div>
-
-            <div class="imagen">
-                <img class="pokemon" src="/img/squirtle.png" alt="">
-            </div>
-
-            <div class="ataques">
-                <h4>Abilities:</h4>
-                <ul>
-                    <li>Torrent</li>
-                    <li>Rain-dish</li>
-                </ul>
-            </div>
-
-        </div>
-        <div class="carta-border carta-border-pikachu">
-            <div class="cabecera">
-                <span class="nom_pokemon">Pikachu</span>
-                <div class="stats">
-                    <span>70PH</span>
-                    <span class="tipo">L</span>
-                </div>
-            </div>
-
-            <div class="imagen">
-                <img class="pokemon" src="/img/pikachu.png" alt="">
-            </div>
-
-            <div class="ataques">
-                <h4>Abilities:</h4>
-                <ul>
-                    <li>Static</li>
-                    <li>Lightning-rod</li>
-                </ul>
+            <audio controls preload="metadata" src="./Musica/Pokemon Chill Music.mp3"></audio>
+            <div class="main-song-controls">
+                <img src="./img/Icons/previous.png" alt="" class="icon" id="Back10">
+                <img src="./img/Icons/pause.png" alt="" class="icon" id="PlayPause">
+                <img src="./img/Icons/next.png" alt="" class="icon" id="Plus10">
             </div>
         </div>
     </div>
+</div>
 
 </body>
 
